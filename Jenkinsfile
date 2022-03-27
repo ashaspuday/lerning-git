@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "wo7and/mynginxapp"
+    imagename = "ashaspuday/mynginxapp"
     registryCredential = 'wo7and-dockerhub'
     dockerImage = ''
     }
