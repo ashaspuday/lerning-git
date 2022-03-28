@@ -1,14 +1,14 @@
 pipeline {
   environment {
     imagename = "ashaspuday/mynginxapp"
-    registryCredential = 'wo7and-dockerhub'
+    registryCredential = 'dockerid'
     dockerImage = ''
     }
     agent any
     stages {
         stage('Git Clone') {
             steps {
-                git([url: 'https://github.com/wo7and/lerning-git.git', branch: 'master', credentialsId: 'wo7and-github-user-token'])
+                git([url: 'https://github.com/wo7and/lerning-git.git', branch: 'master', credentialsId: 'git-token'])
             }
         }
         stage('Build Image') {
